@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>YOUR GAME</title>
+  <style>
+    body {
+      margin: 0; 
+      font-family: Arial, sans-serif;
+      background-color: #0b3d91;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    #game-container {
+      margin-top: 20px;
+    }
+    #ui {
+      margin-top: 10px;
+      width: 800px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #0066ff;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button:disabled {
+      background-color: grey;
+      cursor: not-allowed;
+    }
+    #notification {
+      margin-top: 10px;
+      font-weight: bold;
+      min-height: 20px;
+      text-align: center;
+      color: #ffeb3b;
+    }
+  </style>
+</head>
+<body>
+  <h1>YOUR GAME</h1>
+
+  <div id="ui">
+    <button id="connectWalletBtn">Connect Ronin Wallet</button>
+    <div>Token FFZ: <span id="tokenBalance">-</span></div>
+    <div>:Caught <span id="caughtBtn">0</span></div>
+    <button id="catchBtn" disabled>Catch Fish</button>
+  </div>
+
+  <div id="notification"></div>
+
+  <div id="game-container"></div>
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
